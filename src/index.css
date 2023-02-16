@@ -1,13 +1,668 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  color: #fff;
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: PressStart2P400;
+  font-display: swap;
+  src: url("assets/fonts/PressStart2P-400.ttf");
+}
+@font-face {
+  font-family: Exo500 ;
+  font-display: swap;
+  src: url("assets/fonts/Exo-500.ttf");
+}
+@font-face {
+  font-family: Exo400 ;
+  font-display: swap;
+  src: url("assets/fonts/Exo-400.ttf");
+}
+@font-face {
+  font-family: Inter700 ;
+  font-display: swap;
+  src: url("assets/fonts/Inter-700.ttf");
+}
+@font-face {
+  font-family: Exo700 ;
+  font-display: swap;
+  src: url("assets/fonts/Exo-700.ttf");
+}
+@font-face {
+  font-family: Inter500 ;
+  font-display: swap;
+  src: url("assets/fonts/Inter-500.ttf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #000;
+}
+nav {
+  height: 50px;
+  background: linear-gradient(#1f3626, #142a1a);
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.2);
+}
+h1, h2, header .logo {
+  text-transform: uppercase;
+  font-family: PressStart2P400;
+}
+h1, h2 {
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+}
+h2 {
+  padding: 0 5%;
+  line-height: 30px;
+}
+button {
+  border: 0;
+  background: #2DA359;
+  border-radius: 12px;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 4px;
+  background-color: #fff;
+  margin: 7px 0;
+  transition: 0.4s;
+}
+nav .logo {
+  font-size: 10px;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+nav {
+  position: relative;
+}
+nav ul {
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  transform: translate(-50%, 0);
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background: #142a1a;
+  z-index: 2023;
+}
+nav ul li {
+  list-style: none;
+  margin: 15px 0;
+}
+nav ul li a {
+  color: #2DA359;
+  font-family: Exo400;
+}
+nav button {
+  font-family: Exo500;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+#header {
+  padding: 50px 0;
+}
+.container > p {
+  line-height: 20px;
+  font-family: Exo400;
+  font-size: 12px;
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+#header .diamondRings {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 0 0;
+  position: relative;
+  z-index: -1;
+}
+#header .diamondRings img:first-child {
+  width: 200px;
+}
+#header .diamondRings img:last-child {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  bottom: -6px;
+}
+.title {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+.title hr {
+  width: 100%;
+  height: 2px;
+}
+#ecosystem .tabs button {
+  font-size: 14px;
+  margin: 25px 0 0 0;
+  padding: 15px 40px;
+  background: transparent;
+  border: 1px solid #2DA359;
+  font-family: Inter700;
+}
+#ecosystem .tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 40px 0 0 0;
+}
+#ecosystem .tabs button:first-child {
+  background: #2DA359;
+  border: 1px solid #2E4B94;
+}
+#ecosystem {
+  padding-bottom: 50px;
+}
+#ecosystem .wrap {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 50px 0;
+  align-items: center;
+}
+#ecosystem .wrap img {
+  width: 200px;
+}
+#ecosystem .wrap div p:first-child, #decentrilize .wrap p:first-child, #join p, #tokens .wrap div:first-child p:first-child {
+  font-size: 20px;
+  font-family: Exo700;
+}
+#ecosystem .wrap div p:nth-child(2), #decentrilize .wrap p:nth-child(2), #tokens .wrap div p:nth-child(2) {
+  font-size: 12px;
+  line-height: 27px;
+  font-family: Exo400;
+  margin: 20px 0;
+}
+#ecosystem .wrap div {
+  margin: 50px 0 0 0;
+}
+#ecosystem .wrap button {
+  font-family: Inter500;
+}
+#products .card {
+  background: rgba(25, 25, 25, 0.7);
+  border: 2px solid #2DA359;
+  border-radius: 12px;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0 0 0;
+}
+#products .card img {
+  width: 100%;
+  margin: -10px 0 0 0;
+}
+#products .card .img {
+  border: 1px solid #2DA359;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#products .card p {
+  font-family: Exo400;
+  text-align: center;
+  margin: 30px 0 60px 0;
+}
+#products .card p span {
+  font-family: Exo700;
+}
+#products .card button {
+  height: 45px;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #2DA359;
+  font-family: Exo500;
+}
+#products .card button:first-child {
+  background: #2DA359;
+}
+#products .card .btnWrap {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+#decentrilize {
+  padding: 50px 0;
+}
+#decentrilize .container > p {
+  margin: 40px 0;
+}
+#decentrilize .wrap div {
+  background: linear-gradient(180deg, rgba(45, 163, 89, 0) 0%, rgba(45, 163, 89, 0.71) 100%);
+  border: 3px solid #2DA359;
+  border-radius: 18.5077px;
+  padding: 20px 30px 0 30px;
+}
+#decentrilize .wrap div:last-child {
+  margin: 50px 0 0 0;
+}
+#decentrilize .wrap div img {
+  width: 100%;
+  margin: 20px 0 0 0;
+}
+#join {
+  padding: 50px 0;
+}
+#join button {
+  width: 193.53px;
+  height: 48px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#join p {
+  text-align: center;
+}
+#join .wrap {
+  margin: 40px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #2DA359;
+  border-radius: 18.5077px;
+  padding-top: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#join .wrap div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#join .wrap div button {
+  margin: 40px 0 0 0;
+}
+#join img {
+  width: 200px;
+  margin: 50px 0 0 0;
+}
+#tokens .wrap div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#tokens .wrap div:first-child .btnWrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+#tokens .wrap div p {
+  text-align: center;
+}
+#tokens .cart {
+  border: 1px solid #2DA359;
+  border-radius: 12px;
+  height: 280px;
+  width: 220px !important;
+  margin: 50px 0 0 0;
+  padding: 20px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#tokens > div.container > div > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#tokens .wrap div:first-child .btnWrap button:last-child {
+  background: transparent;
+  border: 1px solid #2DA359;
+}
+#tokens .cart .img img {
+  width: 25px;
+}
+#tokens .cart .img {
+  width: 48px !important;
+  height: 41px;
+  background: #2DA359;
+  border-radius: 12px;
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 6px 0 #00702A;
+}
+#tokens > div.container > div > div:nth-child(2) > div > p:nth-child(2) {
+  font-family: Exo700;
+  font-size: 16px;
+  width: 100%;
+}
+#tokens > div.container > div > div:nth-child(2) > div > p:nth-child(3) {
+  font-family: Exo400;
+  font-size: 14px;
+  width: 100%;
+}
+#tokens > div.container > div > div:nth-child(2) > div:nth-child(3) {
+  background: rgba(25, 25, 25, 0.7);
+  backdrop-filter: blur(23.1346px); 
+  justify-content: center;
+  align-items: center;
+}
+#tokens > div.container > div > div:nth-child(2) > div:nth-child(3) button {
+  width: 137px;
+  height: 54px;
+}
+footer {
+  background: linear-gradient(0deg, rgba(0, 56, 16, 0.2), rgba(0, 56, 16, 0.2)), linear-gradient(180deg, rgba(217, 217, 217, 0.24) 0%, rgba(217, 217, 217, 0.15) 100%);
+  box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.2);
+  margin: 100px 0 0 0;
+  padding: 0 0 100px 0;
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .container > span {
+  margin: 80px 0 0 0;
+}
+footer p {
+  font-size: 20px;
+  font-family: Exo400;
+  margin: 60px 0 30px 0;
+  text-align: center;
+}
+footer span {
+  font-size: 15px;
+  font-family: Exo400;
+  display: block;
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+footer .container:last-child div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 80px 0 0 0;
+}
+
+@media (min-width: 360px) {
+  nav .logo {
+    font-size: 14px;
+  }
+  button {
+    padding: 8px 25px;
+  }
+  #ecosystem .wrap div p:first-child, #decentrilize .wrap p:first-child, #join p {
+    font-size: 28px;
+  }
+  #ecosystem .wrap div p:nth-child(2), #decentrilize .wrap p:nth-child(2) {
+    font-size: 18px;
+  }
+  #ecosystem .wrap button {
+    font-size: 15px;
+  }
+  #products .card button {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  h1, h2 {
+    font-size: 20px;
+    line-height: 60px;
+  }
+  h2 {
+    line-height: 40px;
+    width: 100%;
+  }
+  .container > p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  #header .diamondRings img:last-child {
+    width: 500px;
+  }
+  .title hr {
+    width: 50%;
+  }
+  #decentrilize .wrap div {
+    width: 300px;
+  }
+  #decentrilize .wrap div:last-child {
+    margin: 0;
+  }
+  #decentrilize .wrap div img {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+  #decentrilize .wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  #decentrilize .container > p {
+    width: 522px;
+    margin: 50px auto 40px auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 1000px;
+  }
+  #menuToggleMobDiv {
+    display: none;
+  }
+  nav, nav .container {
+    height: 100px;
+  }
+  nav ul {
+    display: flex;
+    position: static;
+    transform: translate(0, 0);
+    flex-direction: row;
+    justify-content: space-between;
+    background: transparent;
+    width: 50%;
+  }
+  nav .logo {
+    font-size: 24px;
+  }
+  nav button {
+    font-size: 14px;
+  }
+  h1, h2 {
+    font-size: 36px;
+    line-height: 105px;
+    margin: 20px 0 0 0;
+  }
+  h2 {
+    line-height: 50px;
+    width: 100%;
+  }
+  #header .diamondRings img:first-child {
+    width: 400px;
+  }
+  #header .diamondRings img:last-child {
+    width: 100%;
+  }
+  #header .diamondRings {
+    margin: 50px 0 0 0;
+  }
+  #header .diamondRings img:last-child {
+    bottom: -13px;
+  }
+  .title hr {
+    margin: 15px 0 0 0;
+    width: 20%;
+  }
+  #ecosystem .wrap {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #ecosystem .wrap img {
+    width: 400px;
+  }
+  #ecosystem .wrap div p:first-child, #decentrilize .wrap p:first-child, #join p {
+    font-size: 38px;
+  }
+  #ecosystem .wrap div p:nth-child(2), #decentrilize .wrap p:nth-child(2) {
+    font-size: 18px;
+  }
+  #ecosystem .wrap div {
+    width: 500px;
+  }
+  #products .cardWrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 50px 0;
+  }
+  #products .card {
+    width: 30%;
+  }
+  #decentrilize {
+    padding: 0;
+  }
+  #decentrilize .wrap div {
+    width: 450px;
+  }
+  #decentrilize .container > p {
+    margin: 70px auto 50px auto;
+  }
+  #join p {
+    text-align: left;
+    width: 430px;
+  }
+  #join .wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+  #join .wrap div {
+    align-items: flex-start;
+  }
+  #join .wrap div button {
+    margin: 70px 0 0 0;
+  }
+  #join img {
+    width: 400px;
+    margin: 90px 0 0 0;
+  }
+  #tokens .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+  }
+  #tokens .wrap div:first-child {
+    align-items: flex-start;
+    width: 500px;
+  }
+  #tokens .wrap div:first-child .btnWrap {
+    justify-content: flex-start;
+  }
+  #tokens .wrap div p {
+    text-align: left;
+    width: 540px;
+  }
+  #tokens .wrap div:first-child .btnWrap button:last-child {
+    margin: 0 0 0 50px;
+  }
+  #tokens > div.container > div > div:nth-child(1) > p:nth-child(2) {
+    width: 300px;
+  }
+  #tokens > div.container > div > div:nth-child(2) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 600px;
+  }
+  #tokens > div.container > div > div:nth-child(1) {
+    width: 40%;
+  }
+  #tokens .cart {
+    width: 180px !important;
+    margin: 0;
+    align-items: flex-start;
+  }
+  footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer .container > span {
+    width: 350px;
+  }
+  footer p {
+    text-align: left;
+  }
+  footer span {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1280px) {
+  nav .logo {
+    font-size: 26px;
+  }
+  nav button {
+    font-size: 16px;
+    width: 217px;
+    height: 56px;
+  }
+  .container {
+    width: 1200px;
+  }
+  nav .container {
+    width: 1200px;
+  }
+  .title hr {
+    width: 45%;
+  }
+  #products .card {
+    width: 350px;
+    justify-content: space-between;
+  }
+  #products .card button {
+    width: 135px;
+    padding: 0;
+    font-size: 18px;
+  }
+  #decentrilize .wrap div {
+    width: 550px;
+  }
+  #tokens > div.container > div > div:nth-child(1) > p:nth-child(1) {
+    font-size: 30px;
+  }
+  #tokens .wrap div:first-child .btnWrap button {
+    width: 193px;
+    height: 48px;
+  }
+  #tokens .cart {
+    width: 200px !important;
+    margin: 0;
+  }
+  #tokens > div.container > div > div:nth-child(2) {
+    width: 700px;
+  }
 }
