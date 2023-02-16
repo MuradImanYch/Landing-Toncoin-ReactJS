@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Landing-Toncoin-ReactJS/static/css/main.31053e3e.css",
-    "main.js": "/Landing-Toncoin-ReactJS/static/js/main.846fb6c3.js",
+    "main.js": "/Landing-Toncoin-ReactJS/static/js/main.836d4846.js",
     "static/js/787.a5bed016.chunk.js": "/Landing-Toncoin-ReactJS/static/js/787.a5bed016.chunk.js",
     "static/media/img.png": "/Landing-Toncoin-ReactJS/static/media/img.acf32a292f6533cfedbe.png",
     "static/media/img2.png": "/Landing-Toncoin-ReactJS/static/media/img2.7437fb376b1192e72974.png",
@@ -18,11 +18,11 @@
     "static/media/mascot.png": "/Landing-Toncoin-ReactJS/static/media/mascot.93707a4b3be904187a31.png",
     "index.html": "/Landing-Toncoin-ReactJS/index.html",
     "main.31053e3e.css.map": "/Landing-Toncoin-ReactJS/static/css/main.31053e3e.css.map",
-    "main.846fb6c3.js.map": "/Landing-Toncoin-ReactJS/static/js/main.846fb6c3.js.map",
+    "main.836d4846.js.map": "/Landing-Toncoin-ReactJS/static/js/main.836d4846.js.map",
     "787.a5bed016.chunk.js.map": "/Landing-Toncoin-ReactJS/static/js/787.a5bed016.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31053e3e.css",
-    "static/js/main.846fb6c3.js"
+    "static/js/main.836d4846.js"
   ]
 }
