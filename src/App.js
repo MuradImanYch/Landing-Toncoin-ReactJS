@@ -71,6 +71,37 @@ const App = () => {
     });
   }
 
+  const tab1 = (e) => {
+    $('#ecosystem .tabs button').css({background: 'transparent'}).css({border: '1px solid #2DA359'});
+    $(e.target).css({background: '#2DA359'}).css({border: '1px solid #2E4B94'});
+    $('#ecosystem > section > div.container > div.wrap > div > p:nth-child(1)').hide().text('NFT').fadeIn('slow');
+    $('#ecosystem > section > div.container > div.wrap > div > p:nth-child(2)').hide().text('The main goal is for members to join forces so that the collective community can invest treasury funds in NFT blue chip art and other collectibles. And also because of the large number of scammers on the market, they have the ability to give a trust factor to any project available on the market.').fadeIn('slow');
+  }
+  const tab2 = (e) => {
+    $('#ecosystem .tabs button').css({background: 'transparent'}).css({border: '1px solid #2DA359'});
+    $(e.target).css({background: '#2DA359'}).css({border: '1px solid #2E4B94'});
+    $('#ecosystem > section > div.container > div.wrap > div > p:nth-child(1)').hide().text('Games').fadeIn('slow');
+    $('#ecosystem > section > div.container > div.wrap > div > p:nth-child(2)').hide().text('Games DAOs are focused on the self-organizing community aspect of DAOs by bringing together like-minded individuals. The mission is to leverage the collective knowledge of Metaverse NFT and P2E game development. Any decision will be reached by voting in accordance with the decisions of the community.').fadeIn('slow');
+  }
+  const tab3 = (e) => {
+    $('#ecosystem .tabs button').css({background: 'transparent'}).css({border: '1px solid #2DA359'});
+    $(e.target).css({background: '#2DA359'}).css({border: '1px solid #2E4B94'});
+    $('#ecosystem > section > div.container > div.wrap > div > p:nth-child(1)').hide().text('Social').fadeIn('slow');
+    $('#ecosystem > section > div.container > div.wrap > div > p:nth-child(2)').hide().text('Social DAOs are focused on the self-organizing community aspect of DAOs by bringing together like-minded individuals such as builders, artists, and creatives.').fadeIn('slow');
+  }
+  const tab4 = (e) => {
+    $('#ecosystem .tabs button').css({background: 'transparent'}).css({border: '1px solid #2DA359'});
+    $(e.target).css({background: '#2DA359'}).css({border: '1px solid #2E4B94'});
+    $('#ecosystem > section > div.container > div.wrap > div > p:nth-child(1)').hide().text('Utilities').fadeIn('slow');
+    $('#ecosystem > section > div.container > div.wrap > div > p:nth-child(2)').hide().text('Social DAOs are focused on the self-organizing community aspect of DAOs by bringing together like-minded individuals such as builders, artists, and creatives.').fadeIn('slow');
+  }
+  const tab5 = (e) => {
+    $('#ecosystem .tabs button').css({background: 'transparent'}).css({border: '1px solid #2DA359'});
+    $(e.target).css({background: '#2DA359'}).css({border: '1px solid #2E4B94'});
+    $('#ecosystem > section > div.container > div.wrap > div > p:nth-child(1)').hide().text('Grants').fadeIn('slow');
+    $('#ecosystem > section > div.container > div.wrap > div > p:nth-child(2)').hide().text('TTM DAO creates next-generation coordination tools to connect them - built the DAO native way.').fadeIn('slow');
+  }
+
   return (
     <div id='app'>
       <header>
@@ -90,12 +121,12 @@ const App = () => {
               <li><a href='#tokens'>Token</a></li>
               <li><a href=''>Job</a></li>
             </ul>
-            <button>contact us →</button>
+            <a target="_blank" href='https://t.me/tonstory'><button>contact us →</button></a>
           </div>
         </nav>
         <div id='header'>
           <div className='container'>
-            <h1>Bringing Millions To <br /> The Metaverse</h1>
+            <h1>Collective wisdom <br /> a collaborative management approach</h1>
             <p>TTM DAO is a community-first, decentralized autonomous organization (DAO) that creates value for <br /> investors and players in the growing blockchain metaverse (game + social + NFTs)</p>
             <div className='diamondRings'>
               <img src={diamond} alt='diamond' />
@@ -114,17 +145,17 @@ const App = () => {
           <div className='container'>
               <p>Five key pillars of TTM DAO ecosystem to fulfill our vision</p>
               <div className='tabs'>
-                <button>Path Ventures</button>
-                <button>Path Guild</button>
-                <button>Path Gaming Platform</button>
-                <button>Path Fintech</button>
-                <button>Path Insights</button>
+                <button onClick={tab1}>Path Ventures</button>
+                <button onClick={tab2}>Path Guild</button>
+                <button onClick={tab3}>Path Gaming Platform</button>
+                <button onClick={tab4}>Path Fintech</button>
+                <button onClick={tab5}>Path Insights</button>
               </div>
               <div className='wrap'>
                 <div>
-                  <p>Path Ventures</p>
-                  <p>Invest in web3 games and metaverses by providing access to our network of capital, advice and ecosystem integration support</p>
-                  <button>Explore</button>
+                  <p>NFT</p>
+                  <p>The main goal is for members to join forces so that the collective community can invest treasury funds in NFT blue chip art and other collectibles. And also because of the large number of scammers on the market, they have the ability to give a trust factor to any project available on the market.</p>
+                  <button>Learn more</button>
                 </div>
                 <img src={rings} alt='rings' />
               </div>
@@ -145,7 +176,8 @@ const App = () => {
                   <img src={mascot} alt='mascot' />
                 </div>
                 <p><span>TonFancy.tech</span> <br />
-The first gaming metaverse of entertainment on the TON blockchain, peer-to-peer (P2P) game applications, where each user can play or compete with other platform participants. Most of the games in our universe are based on decentralization, pools and smart contracts.</p>
+                The first gaming metaverse of entertainment on the TON blockchain, peer-to-peer (P2P) game applications, where each user can play or compete with other platform participants. Most of the games in our universe are based on decentralization, pools and smart contracts.
+                </p>
                 <div className='btnWrap'>
                   <button>Use TonFancy</button>
                   <button>Learn more</button>
@@ -155,8 +187,9 @@ The first gaming metaverse of entertainment on the TON blockchain, peer-to-peer 
                 <div className='img'>
                   <img src={diamond} alt='diamond' />
                 </div>
-                <p>Lörem ipsum bere terraplastisk asoras. Nysk tävla ut. Prerade krogisk tredis didåskapet gäsade. Berade vitöngen i askstoppad.
-Lörem ipsum bere terraplastisk asoras. Nysk tävla ut. Prerade krogisk tredis didåskapet gäsade. Berade vitöngen i askstoppad.  </p>
+                <p>
+                A marketplace and digital community designed to create a level playing field for creators and collectors alike. One of the things that will be laid is the regular creation of nft collections from famous artists, which will be distributed through freemint.
+                </p>
                 <div className='btnWrap'>
                   <button>Coming Soon</button>
                   <button>Learn more</button>
@@ -166,8 +199,9 @@ Lörem ipsum bere terraplastisk asoras. Nysk tävla ut. Prerade krogisk tredis d
                 <div className='img'>
                   <img src={diamond} alt='diamond' />
                 </div>
-                <p>Lörem ipsum bere terraplastisk asoras. Nysk tävla ut. Prerade krogisk tredis didåskapet gäsade. Berade vitöngen i askstoppad.
-Lörem ipsum bere terraplastisk asoras. Nysk tävla ut. Prerade krogisk tredis didåskapet gäsade. Berade vitöngen i askstoppad.  </p>
+                <p>
+                Reputation ID. Project or wallet. Develop collective trust in certain individuals.
+                </p>
                 <div className='btnWrap'>
                   <button>Coming Soon</button>
                   <button>Learn more</button>
