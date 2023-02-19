@@ -107,7 +107,7 @@ const App = () => {
       <header>
         <nav>
           <div className='container'>
-            <a href="" className='logo'>ton story</a>
+            <a href="" className='logo'>TTMDAO.Space</a>
             <div id="menuToggleMobDiv" onClick={menuToggle}>
                 <div className="bar1"></div>
                 <div className="bar2"></div>
@@ -145,11 +145,11 @@ const App = () => {
           <div className='container'>
               <p>Five key pillars of TTM DAO ecosystem to fulfill our vision</p>
               <div className='tabs'>
-                <button onClick={tab1}>Path Ventures</button>
-                <button onClick={tab2}>Path Guild</button>
-                <button onClick={tab3}>Path Gaming Platform</button>
-                <button onClick={tab4}>Path Fintech</button>
-                <button onClick={tab5}>Path Insights</button>
+                <button onClick={tab1}>NFT</button>
+                <button onClick={tab2}>Games</button>
+                <button onClick={tab3}>Social</button>
+                <button onClick={tab4}>Utilities</button>
+                <button onClick={tab5}>Grants</button>
               </div>
               <div className='wrap'>
                 <div>
